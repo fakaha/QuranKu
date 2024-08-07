@@ -12,7 +12,7 @@ export const ListSurah = (props) => {
           <p className="">{props.dataParent.englishNameTranslation}</p>
         </div>
       </div>
-      <p>{props.dataParent.name}</p>
+      <p className="text-[#076C58] font-bold">{props.dataParent.name}</p>
     </div>
   );
 };

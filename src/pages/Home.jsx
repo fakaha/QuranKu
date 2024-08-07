@@ -11,8 +11,8 @@ export const Home = () => {
     }, [])
   return (
     <div className='p-8'>
-      <h1 className='text-center text-2xl'>QuranKu</h1>
-      <div className='flex flex-wrap gap-3 justify-center'>
+      <h1 className='text-center text-2xl font-bold text-[#004B40] my-3'>QuranKu</h1>
+      <div className='flex flex-wrap gap-6 justify-center'>
         {Surah.map((result) => (
             <ListSurah key={result.number} dataParent={result}/>
         ))}
