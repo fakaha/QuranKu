@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { fetchSurah } from "../services/SurahServices";
 import { ListSurah } from "../components/ListSurah";
+import { Header } from "../components/Header";
 
 export const Home = () => {
   const [Surah, setSurah] = useState([]);
@@ -13,7 +14,8 @@ export const Home = () => {
 
   const result = search.length === 0 ? Surah : Surah.filter((item) => item.namaLatin.toLowerCase().includes(search.toLowerCase())) 
   return (
-    <div className="py-8 px-12">
+    <div className="pb-8 px-12">
+      <Header/>
       <div className="flex justify-center">
       <h1 onClick={() => window.location.href = '/'} className="text-center text-2xl font-bold text-[#004B40] my-3 hover:cursor-pointer">
         QuranKu
