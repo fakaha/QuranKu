@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 export const ListSurah = (props) => {
   const navigate = useNavigate()
   return (
-    <div onClick={() => navigate(`/detail-surat/${props.dataParent.nomor}`)} className="flex items-center justify-between hover:cursor-pointer bg-[#F5F5DC] rounded-lg p-2">
+    <div onClick={() => navigate(`/detail-surat/${props.dataParent.nomor}`)} className="group flex items-center justify-between hover:cursor-pointer bg-[#F5F5DC] rounded-lg p-2 hover:bg-[#87D1A4] hover:text-[#fff]">
       <div className="flex justify-center items-center gap-2">
         <p className="flex text-[#fff] justify-center items-center bg-[#87D1A4] w-[36px] h-[36px] rounded-lg">
           {props.dataParent.nomor}
@@ -17,7 +17,7 @@ export const ListSurah = (props) => {
           </div>
         </div>
       </div>
-      <p className="text-[#076C58] font-bold">{props.dataParent.nama}</p>
+      <p className="font-bold">{props.dataParent.nama}</p>
     </div>
   );
 };
