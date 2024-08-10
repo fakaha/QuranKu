@@ -14,7 +14,7 @@ export const Home = () => {
 
   const result = search.length === 0 ? Surah : Surah.filter((item) => item.namaLatin.toLowerCase().includes(search.toLowerCase())) 
   return (
-    <div className="pb-8 px-12">
+    <div className="pb-8 lg:px-12 px-8">
       <Header/>
       <div className="flex justify-center">
       <h1 onClick={() => window.location.href = '/'} className="text-center text-2xl font-bold text-[#004B40] my-3 hover:cursor-pointer">

@@ -13,7 +13,7 @@ export const DetailSurah = () => {
     });
   }, [id]);
   return (
-    <div className="pb-8 px-12 flex flex-col">
+    <div className="pb-8 lg:px-12 px-8 flex flex-col">
       <Header/>
       <div className="text-center my-3">
         <h1>{surahDetail.nama}</h1>
