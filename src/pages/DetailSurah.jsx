@@ -1,21 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { fetchDetailSurah } from "../services/SurahServices";
 import { ListDetailSurah } from "../components/ListDetailSurah";
 import { Header } from "../components/Header";
+import { DarkMode } from "../context/ThemeContext";
 
 export const DetailSurah = () => {
   const { id } = useParams();
   const [surahDetail, setSurahDetail] = useState([]);
+  const {isDarkMode} = useContext(DarkMode)
   useEffect(() => {
     fetchDetailSurah(id, (data) => {
       setSurahDetail(data);
     });
   }, [id]);
   return (
-    <div className="pb-8 lg:px-12 px-8 flex flex-col">
+    <div className={`pb-8 lg:px-12 px-8 flex flex-col ${isDarkMode ? 'bg-[#1F1F1F]' : 'bg-white'}`}>
       <Header/>
-      <div className="text-center my-3">
+      <div className={`text-center my-3 ${isDarkMode ? 'text-white' : 'text-black'}`}>
         <h1>{surahDetail.nama}</h1>
         <h1>{surahDetail.namaLatin}</h1>
         <div className="flex justify-center">

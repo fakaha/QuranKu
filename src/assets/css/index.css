@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+input[type="checkbox"]:checked ~ label .switcher {
+  transform: translateX(75%); /* Menggeser saklar ke kanan */
+}
